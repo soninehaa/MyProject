@@ -5,14 +5,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import net.masterthought.cucumber.json.Hook;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 public class GoogleSearchSteps  {
-
     public GoogleSearchPage googleSearchPage =new GoogleSearchPage();
 
     @And("User open {string} search engine")

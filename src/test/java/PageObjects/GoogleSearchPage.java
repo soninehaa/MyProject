@@ -1,15 +1,12 @@
 package PageObjects;
 
-import Base.Hooks;
 import Utilities.MyUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
-
 import static Base.DriversFactory.getDriver;
 
 public class GoogleSearchPage {
@@ -36,7 +33,7 @@ public class GoogleSearchPage {
 
     }
 
-    public String getFirstResultName() throws InterruptedException {
+    public String getFirstResultName() {
         String firstResultName="";
         utility.waitForElement(firstResult,20);
         System.out.println(firstResult);
