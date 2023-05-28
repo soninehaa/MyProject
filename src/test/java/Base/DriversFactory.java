@@ -54,24 +54,23 @@ public class DriversFactory {
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
                     driver = new ChromeDriver(chromeOptions);
-                    driver.manage().window().maximize();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
                     driver = new FirefoxDriver(firefoxOptions);
-                    driver.manage().window().maximize();
                     break;
                 case "edge":
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     EdgeOptions edgeOptions = new EdgeOptions();
                     edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-                    driver.manage().window().maximize();
                     break;
 
             }
+            driver.manage().window().maximize();
+
         }catch (Exception e)
         {
             e.getStackTrace();

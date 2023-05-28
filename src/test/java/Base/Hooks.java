@@ -12,19 +12,15 @@ import static Base.DriversFactory.*;
 
 public class Hooks {
 
-
     @Before
     public void setupDriver() {
-
     }
 
     @After(order=2)
     public void takeAScraenshotOnFailure(Scenario scenario) {
 
         if (scenario.isFailed()) {
-
             TakesScreenshot ts = (TakesScreenshot) getDriver();
-
             byte[] src = ts.getScreenshotAs(OutputType.BYTES);
             scenario.attach(src, "image/png", "screenshot");
         }
@@ -34,9 +30,6 @@ public class Hooks {
     public void tearDown() {
         closeDriver();
     }
-
-
-
-    }
+}
 
 

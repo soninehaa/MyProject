@@ -17,19 +17,14 @@ public class GoogleSearchSteps  {
 
     @And("User open {string} search engine")
     public void userOpenGoogleSearchEngine(String arg0) {
-
         googleSearchPage.openURL(arg0);
 
     }
 
     @When("User enters {string} in search text box")
     public void userEntersInSearchTextBox(String arg0) {
-        googleSearchPage.enterSearchItem(arg0);
-    }
 
-    @And("user hits enter button")
-    public void userHitsEnterButton() {
-      //  googleSearchPage.pressEnter();
+        googleSearchPage.enterSearchItem(arg0);
     }
 
     @Then("Verify first search result on the page is {string}")

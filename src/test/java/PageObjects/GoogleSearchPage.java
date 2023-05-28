@@ -38,18 +38,10 @@ public class GoogleSearchPage {
 
     public String getFirstResultName() throws InterruptedException {
         String firstResultName="";
-
-
         utility.waitForElement(firstResult,20);
         System.out.println(firstResult);
         firstResultName = firstResult.get(0).getText();
-
         return firstResultName;
-    }
-
-
-    public void launchBrowser() {
-
     }
 
     public void openURL(String arg0) {

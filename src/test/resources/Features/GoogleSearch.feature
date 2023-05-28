@@ -4,7 +4,6 @@ Feature: Search from google
   Scenario Outline: search from google
     Given  User open "<searchEngine>" search engine
     When   User enters "<searchTerm>" in search text box
-    And    user hits enter button
     Then   Verify first search result on the page is "<expectedString>"
 
 Examples:

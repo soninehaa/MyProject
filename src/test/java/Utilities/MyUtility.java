@@ -10,11 +10,9 @@ import java.time.Duration;
 import java.util.List;
 
 public class MyUtility {
-
     WebDriver driver;
 
     public MyUtility(WebDriver driver) {
-
         this.driver=driver;
     }
 
