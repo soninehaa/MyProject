@@ -23,8 +23,7 @@ public class GoogleSearchSteps  {
     }
 
     @Then("Verify first search result on the page is {string}")
-    public void verifyFirstSearchResultOnThePageIs(String arg0) throws InterruptedException {
-
+    public void verifyFirstSearchResultOnThePageIs(String arg0) {
     String st =googleSearchPage.getFirstResultName();
         Assert.assertEquals(st,arg0);
     }
